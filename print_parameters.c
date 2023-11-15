@@ -14,7 +14,9 @@ int print_parameters(char c, va_list args)
 	type_id identity[] = {
 		{"b", print_ui_binary},
 		{"u", print_unsigned},
-		{"o", print_octal},
+/**
+ * {"o", print_octal},
+*/
 		{"x", print_hexa},
 		{"X", print_Hexa},
 		{"p", print_pointer},
@@ -23,7 +25,6 @@ int print_parameters(char c, va_list args)
 		{"c", print_char},
 		{"s", print_str},
 		{"S", print_wide_str},
-		{"r", print_string},
 		{"d", print_digit},
 		{"i", print_digit},
 		{"b", print_ui_binary},

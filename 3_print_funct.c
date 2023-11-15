@@ -34,13 +34,9 @@ int print_str(va_list args)
  * Return: count of character printed
  */
 
-int print_string(va_list args)
+int print_string(char *str)
 {
-	char *str;
-	int char_count;
-
-	str = va_arg(args, char *);
-	char_count = 0;
+	int char_count = 0;
 
 	while (str[char_count])
 		_putchar(str[char_count++]);

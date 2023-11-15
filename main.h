@@ -11,27 +11,26 @@ extern int print_parameters(char, va_list);
 extern int print_char(va_list);
 extern int print_ui_binary(va_list);
 extern int print_unsigned(va_list);
-extern int print_octal(va_list);
+/*extern int print_octal(va_list);*/
 extern int print_hexa(va_list);
 extern int print_Hexa(va_list);
 extern int print_pointer(va_list args);
 extern int print_rot(va_list);
 extern int print_percent(va_list);
-extern int print_str(va_list);
+extern int print_str(va_list args);
 extern int print_wide_str(va_list);
-extern int print_str(char *);
 extern int print_digit(va_list);
 extern int print_rot(va_list);
 extern int print_percent(va_list);
 
 extern int _putchar(char);
-extern int print_string(va_list args);
+extern int print_string(char *str);
 extern int print_integer(int);
 extern int print_STRING(char *);
 extern int print_binary(unsigned int);
 extern int print_HEXA(unsigned int);
 extern int print_hexx(unsigned int);
-extern int print_oct(unsigned int);
+/*extern int print_oct(unsigned int);*/
 extern int print_uint(unsigned int);
 extern int print_addr(unsigned long int);
 extern int print_rev(char *);

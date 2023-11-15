@@ -10,11 +10,13 @@
  */
 int print_pointer(va_list args)
 {
-	unsigned long int num = va_arg(args, unsigned long int);
+	unsigned long int num = va_arg(args, unsigned long int);	int char_count = 0;
 
 	if (num == 0)
-		return (print_string("(nil)"));
-
+	{
+		return (_putchar('0')); 
+	}
+	
 	char_count = 0;
 
 	if (num / 16)

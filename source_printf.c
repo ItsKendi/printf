@@ -25,10 +25,5 @@ int print_parameters(char c, va_list args)
 			{
 				char_count = print_percent(args);
 			}
-			else
-			{
-				char_count = handle_other_cases(c, args);
-			}
-
 	return (char_count);
 }

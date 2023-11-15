@@ -8,15 +8,14 @@
  * Return: void
  */
 
-int print_octal(unsigned int num)
+int print_octal(va_list args)
 {
-	unsigned int char_count;
+	unsigned int num = va_arg(args, unsigned int);
 
 	char_count = 0;
-
 	if (num / 8)
 		char_count += print_octal(num / 8);
 
 	char_count += _putchar((num % 8) + '0');
-	return (char_count);
+	return print_octal(num);
 }

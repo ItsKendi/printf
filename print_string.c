@@ -13,16 +13,11 @@ int print_string(char *str)
 	if (str == NULL)
 	{
 		str = "(null)";
-
-		while (str[char_count])
-			_putchar(str[char_count++]);
 	}
-	else
+	while (str[char_count])
 	{
-		while (str[char_count])
-			_putchar(str[char_count++]);
+		_putchar(str[char_count++]);
 	}
 
 	return (char_count);
 }
-
