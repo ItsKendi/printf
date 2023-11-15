@@ -14,7 +14,9 @@ int print_STRING(char *str)
 
 	while (str[char_count])
 	{
-		if ((str[char_count] > 0 && str[char_count] < 32) || (str[char_count] >= 127))
+		if ((str[char_count] > 0 && str[char_count] < 32) ||
+		(str[char_count] >= 127))
+
 		{
 			i += _putchar('\\');
 			i += _putchar('x');

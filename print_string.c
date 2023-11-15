@@ -23,6 +23,6 @@ int print_string(char *str)
 			_putchar(str[char_count++]);
 	}
 
-	return char_count;
+	return (char_count);
 }
 

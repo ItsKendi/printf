@@ -11,8 +11,7 @@
 int print_parameters(char c, va_list args)
 {
 	int char_count, i;
-	type_id identity[] =
-	{
+	type_id identity[] = {
 		{"b", print_ui_binary},
 		{"u", print_unsigned},
 		{"o", print_octal},

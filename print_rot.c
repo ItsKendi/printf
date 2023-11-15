@@ -18,11 +18,11 @@ int print_rot(va_list args)
 		print_string("(avy)");
 	}
 
-	for (i = 0, char_count = 0; * (s + i) != '\0'; i++)
+	for (i = 0, char_count = 0; *(s + i) != '\0'; i++)
 	{
 		if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
 		{
-			for (j = 0; * (letter + j) != '\0'; j++)
+			for (j = 0; *(letter + j) != '\0'; j++)
 			{
 				if (*(s + i) == *(letter + j))
 				{
