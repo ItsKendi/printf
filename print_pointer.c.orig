@@ -3,24 +3,22 @@
 #include <limits.h>
 
 /**
- * print_pointer - prints the hexadecimal representation of a pointer
- * @args: arguments passed
- * This function takes a pointer as input and prints its hexadecimal
- * representation.
+ * print_pointer - prints pointer
+ * @num: number to be printed
  *
- * Return: void
+ * Return: nothing
  */
 int print_pointer(va_list args)
 {
 	unsigned long int num = va_arg(args, unsigned long int);
-
+	
 	int char_count = 0;
 
 	if (num == 0)
 	{
-		return (_putchar('0'));
+		return (_putchar('0')); 
 	}
-
+	
 	char_count = 0;
 
 	if (num / 16)

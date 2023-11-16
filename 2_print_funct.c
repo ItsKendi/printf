@@ -17,7 +17,7 @@ int print_wide_str(va_list args)
 *
 * Return: count for characters printed
 */
-int print_percentage(va_list args)
+int print_percent(va_list args)
 {
 	(void) args;
 	return (_putchar('%'));

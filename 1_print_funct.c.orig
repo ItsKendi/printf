@@ -64,11 +64,11 @@ int print_Hexa(va_list args)
 * static int print_octal_helper(unsigned int num)
 * {
 * int char_count = 0;
-* if (num / 8)
+* if (num / 8) 
 * {
 * char_count += print_octal_helper(num / 8);
 * }
 * char_count += _putchar((num % 8) + '0');
 * return char_count;
 * }
-*/
+*/						

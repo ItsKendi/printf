@@ -33,17 +33,17 @@ int print_str(va_list args)
  * @args: va_list
  * Return: count of character printed
  */
-
-int print_string(char *str)
-{
-	int char_count = 0;
-
-	while (str[char_count])
-		_putchar(str[char_count++]);
-
-	return (char_count);
-}
-
+/*
+*int print_string(char *str)
+*{
+*int char_count = 0;
+*
+*	while (str[char_count])
+*		_putchar(str[char_count++]);
+*
+*	return (char_count);
+*}
+*/
 
 /**
  * print_digit - prints an integer

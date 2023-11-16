@@ -3,7 +3,20 @@
 
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdio.h>
+#include <string.h>
 
+/**
+ * struct form - structure that will choose correct function for
+ * format to be executed
+ * @c: format specifier
+ * @ptr: function to execute
+ */
+typedef struct form
+{
+	char c;
+	int (*ptr)(const char **ptr, va_list args);
+} form;
 
 /** format and conversion specifiers prototypes */
 extern int _printf(const char *format, ...);

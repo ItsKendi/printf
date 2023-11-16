@@ -6,24 +6,25 @@
  * @c: string identifier
  * @args: list of va parameters
  * Return: number of all characters printed
+ *
+ * int print_parameters(char c, va_list args)
+ *{
+ *	int char_count = 0;
+ *
+ *	if (c == 'c')
+ *	{
+ *		char_count = print_char(args);
+ *	}
+ *	else
+ *		if (c == 's')
+ *		{
+ *			char_count = print_str(args);
+ *		}
+ *		else
+ *			if (c == '%')
+ *		{
+ *				char_count = print_percent(args);
+ *			}
+ *	return (char_count);
+ *}
  */
-int print_parameters(char c, va_list args)
-{
-	int char_count = 0;
-
-	if (c == 'c')
-	{
-		char_count = print_char(args);
-	}
-	else
-		if (c == 's')
-		{
-			char_count = print_str(args);
-		}
-		else
-			if (c == '%')
-			{
-				char_count = print_percent(args);
-			}
-	return (char_count);
-}
