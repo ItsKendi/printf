@@ -1,53 +1,54 @@
+#include <stdarg.h>
+#include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
-* _printf - produces output according to a format
-* @format: lists the type of arguments according to format
-* Return: 0
-*/
+ * _printf - Print a formatted string
+ * @format: format string to use
+ * @...: argument list
+ * Return: int
+ */
 
 int _printf(const char *format, ...)
 {
-	va_list list;
-	char *s, c;
-	int i = 0, len;
+	va_list ap;
+	int is_specifier, count;
 
-	len = strlen(format);
-	if (len == 0)
+	if (format == NULL)
+		exit(1);
+
+	is_specifier = 0, count = 0;
+	va_start(ap, format);
+
+	while (*format)
 	{
-		printf("Error: Empty or null format string\n");
-		return (-1);
-	}
-	va_start(list, format);
-		while (i < len)
+		if (!is_specifier && (*format) != '%')
 		{
-			if (format[i] == '%')
-			{
-				i++;
-				switch (format[i])
-				{
-					case ('c'):
-						c = va_arg(list, int);
-						putchar(c);
-						break;
-					case('s'):
-						s = va_arg(list, char*);
-						if (s)
-						{
-							while (*s)
-							putchar(*s++);
-						}
-						break;
-					default:
-						printf("Error: Invalid format specifier '%%%c'\n", format[i]);
-			}
+			count += _putchar(*format++);
+			continue;
 		}
-		else
+		else if (*format == '%')
+		{
+			if (is_specifier)
 			{
-				putchar(format[i]);
+				count += _putchar(*format);
+				format++;
+				is_specifier = 0;
 			}
-			i++;
+			else
+			{
+				is_specifier = 1;
+				format++;
+			}
+			continue;
+		}
+
+		count += print_parameters(*format, ap);
+		format++;
+		is_specifier = 0;
 	}
-	va_end(list);
-	return (0);
+
+	va_end(ap);
+	return (count);
 }
